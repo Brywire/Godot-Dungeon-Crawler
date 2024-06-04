@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Character, "res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/knight_idle_anim_f0.png"
 
 
 # Declare member variables here. Examples:
