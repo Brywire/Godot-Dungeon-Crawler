@@ -286,7 +286,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=20]
-radius = 3.00003
+radius = 4.00003
 height = 11.9999
 
 [sub_resource type="Animation" id=18]
