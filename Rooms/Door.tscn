@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/tiles/wall/door_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/tiles/wall/door_fullyopen.png" type="Texture" id=2]
+[ext_resource path="res://Rooms/Door.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -90,12 +91,12 @@ tracks/1/path = NodePath("CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=21]
@@ -131,6 +132,8 @@ tracks/1/keys = {
 extents = Vector2( 16, 16 )
 
 [node name="Door" type="StaticBody2D"]
+collision_mask = 0
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 15 )
@@ -141,4 +144,3 @@ anims/open = SubResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 19 )
-disabled = true
