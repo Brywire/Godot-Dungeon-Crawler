@@ -268,6 +268,8 @@ tracks/3/keys = {
 
 [node name="FlyingCreature" instance=ExtResource( 1 )]
 script = ExtResource( 5 )
+acceleration = 20
+max_speed = 50
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 5 )
